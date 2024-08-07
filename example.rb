@@ -7,7 +7,7 @@ def example_one
   num_cols = 10
   data = Array.new(num_rows) { Array.new(num_cols) { 'x' * 1000 } }
 
-  GC.disable # This is the good stuff
+  GC.disable # toggle comment to test diff: DONT USE IN REAL/PROD CODE
 
   time = Benchmark.realtime do
     csv = data.map { |row| row.join(',') }.join('\n')
