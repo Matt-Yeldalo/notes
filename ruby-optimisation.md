@@ -72,3 +72,8 @@ you should use it to solve all your problems.
 Ruby is NOT good at big data processing. Big data needs big memory: we want to avoid big memory.
 
 2. How much memory will my code use?
+Less memory used = less work Ruby GC has to do = improved performance.
+Example: line-by-line data processing and in-place string manipulations.
+
+3. What is the raw performance of this code?
+least important question, and should be left for the end. Involves analysing the algorithmic complexity.
