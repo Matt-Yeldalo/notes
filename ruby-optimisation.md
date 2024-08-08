@@ -6,24 +6,6 @@
 
 * Run `rbenv install -k`. The -k options keeps sources in rbenv's directory after compilation.
 
-* Sample program
-
-```ruby
-require 'benchmark'
-
-num_rows = 100000
-num_cols = 10
-data = Array.new(num_rows) {Array.new(num_cols) {'x'*1000}}
-
-GC.disable # This is the good stuff
-
-time = Benchmark.realtime do 
-    csv = data.map { |row| row.join(',')}.join('\n')
-end
-
-puts time.round(2)
-```
-
 * Fundamental problem: Too much memory being used and Ruby GC is slow
 
 * Print the process's Resident Set Size - The portion of memory, held in RAM
