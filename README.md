@@ -48,6 +48,7 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
 #### Things to keep in mind
 
 1. Is Ruby the right tool to solve my problem?
+
     Ruby is a general purpose programming language,
     but that doesn't mean you should use it to solve all your problems.
 
@@ -55,9 +56,11 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
     Big data needs big memory: we want to avoid big memory.
 
 2. How much memory will my code use?
+
     Less memory used = less work Ruby GC has to do = improved performance.
     Example: line-by-line data processing and in-place string manipulations.
 
 3. What is the raw performance of this code?
+
     least important question, and should be left for the end.
     Involves analysing the algorithmic complexity.
