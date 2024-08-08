@@ -4,7 +4,8 @@
 
 * For Ruby code, algorithmic tweaking only amounts to a max of 3% performance.
 
-* Run `rbenv install -k`. The -k options keeps sources in rbenv's directory after compilation.
+* Run `rbenv install -k`.
+The -k options keeps sources in rbenv's directory after compilation.
 
 * Fundamental problem: Too much memory being used and Ruby GC is slow
 
@@ -36,7 +37,7 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
 
 * Memory optimisation is easy: just review, think, and rewrite
 
-* A memory-optimised program has the same performance in any modern Ruby 
+* A memory-optimised program has the same performance in any modern Ruby
 
 ### Performance Mindset
 
@@ -47,15 +48,16 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
 #### Things to keep in mind
 
 1. Is Ruby the right tool to solve my problem?
+    Ruby is a general purpose programming language,
+    but that doesn't mean you should use it to solve all your problems.
 
-Ruby is a general purpose p;rogramming languagfe, but that doensn't mean
-you should use it to solve all your problems.
-
-Ruby is NOT good at big data processing. Big data needs big memory: we want to avoid big memory.
+    Ruby is NOT good at big data processing.
+    Big data needs big memory: we want to avoid big memory.
 
 2. How much memory will my code use?
-Less memory used = less work Ruby GC has to do = improved performance.
-Example: line-by-line data processing and in-place string manipulations.
+    Less memory used = less work Ruby GC has to do = improved performance.
+    Example: line-by-line data processing and in-place string manipulations.
 
 3. What is the raw performance of this code?
-least important question, and should be left for the end. Involves analysing the algorithmic complexity.
+    least important question, and should be left for the end.
+    Involves analysing the algorithmic complexity.
