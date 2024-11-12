@@ -37,7 +37,7 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
 
 * Memory optimisation is easy: just review, think, and rewrite
 
-* A memory-optimised program has the same performance in any modern Ruby
+* A memory-optimised program has the roughly same performance in any modern Ruby
 
 ### Performance Mindset
 
@@ -64,3 +64,13 @@ puts "%dM" % `ps -o rss= -p #{Process.pid}`.to_i
 
     least important question, and should be left for the end.
     Involves analysing the algorithmic complexity.
+
+## Save Memory
+
+### Modify strings in place
+
+* You can do most string manipulations in place
+
+* Ruby has several bang! functions for in-place modification
+
+* gsub!, capitalize!, downcase!, upcase!, delete!, reverse!, slice!
